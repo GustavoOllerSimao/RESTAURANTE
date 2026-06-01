@@ -1,0 +1,588 @@
+    /* Reset Global */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --cor-principal: #146b3a;
+        /* Verde Italiano */
+        --cor-detalhe: #8b0000;
+        /* Vermelho Vinho */
+        --cor-fundo: #fdfaf3;
+        /* Marfim/Panna Cotta */
+        --fonte-titulo: "Great Vibes", cursive;
+        --fonte-secundaria: "Pattaya", sans-serif;
+        --fonte-texto: "Inter", sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        /* Evita que o menu fixo cubra o título das seções ao clicar nos links */
+        scroll-padding-top: 90px;
+    }
+
+    body {
+        background-color: var(--cor-fundo);
+    }
+
+    /* Cabeçalho Elegante */
+    .cabecalho {
+        background-color: var(--cor-principal);
+        padding: 15px 8%;
+        /* Reduzido levemente para um visual mais limpo */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .logo a {
+        color: var(--cor-fundo);
+        text-decoration: none;
+    }
+
+    .logo h1 {
+        font-family: var(--fonte-titulo);
+        font-size: 2.8rem;
+        font-weight: 400;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .menu a {
+        color: var(--cor-fundo);
+        font-size: 1.2rem;
+        font-family: var(--fonte-secundaria);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .menu a:hover {
+        color: #e2b957;
+        /* Tom dourado suave no hover */
+    }
+
+    /* Seção de Destaque */
+    #destaque {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--cor-fundo);
+        padding: 110px 8% 40px 8%;
+    }
+
+    .card-destaque-img,
+    .card-destaque-texto {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .imagem1 {
+        max-width: 80%;
+        max-height: 80vh;
+        object-fit: contain;
+        border-radius: 50%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .card-destaque-texto {
+        text-align: center;
+        padding: 0 5%;
+    }
+
+    .titulo-principal {
+        font-family: var(--fonte-titulo);
+        font-size: 5rem;
+        color: var(--cor-detalhe);
+        margin-bottom: 25px;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+
+    .card-destaque-texto p {
+        font-family: var(--fonte-texto);
+        font-size: 1.25rem;
+        line-height: 1.8;
+        color: #4a4a4a;
+        max-width: 550px;
+        margin-bottom: 35px;
+    }
+
+    /* Botão de Destaque */
+    .botao-destaque {
+        display: inline-block;
+        padding: 14px 35px;
+        background-color: var(--cor-principal);
+        color: var(--cor-fundo);
+        font-family: var(--fonte-secundaria);
+        font-size: 1.1rem;
+        text-decoration: none;
+        border-radius: 4px;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(20, 107, 58, 0.2);
+    }
+
+    .botao-destaque:hover {
+        background-color: transparent;
+        border-color: var(--cor-principal);
+        color: var(--cor-principal);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(20, 107, 58, 0.15);
+    }
+
+    /* seção sobre*/
+    #sobre {
+        background-color: #f7f3e9;
+        display: flex;
+        align-items: center;
+        /* Mantém o container geral e a imagem centralizados na tela */
+        justify-content: center;
+        min-height: 100vh;
+        padding: 100px 8%;
+    }
+
+    .sobre-container {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    .sobre-texto {
+        flex: 1.2;
+        /* ALTERADO: Alinha o bloco de texto pelo topo, desgrudando do centro vertical */
+        align-self: flex-start;
+        /* ALTERADO: Cria um recuo exato para emparelhar com o início da foto */
+        margin-top: 15px;
+    }
+
+    .sobre-texto h2 {
+        font-family: var(--fonte-secundaria);
+        color: var(--cor-principal);
+        font-size: 2.5rem;
+        margin-bottom: 5px;
+    }
+
+    .sobre-texto h3 {
+        font-family: var(--fonte-titulo);
+        color: var(--cor-detalhe);
+        font-size: 3.8rem;
+        font-weight: 400;
+        margin-bottom: 25px;
+        line-height: 1.1;
+    }
+
+    .sobre-texto p {
+        font-family: var(--fonte-texto);
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #444;
+        margin-bottom: 15px;
+        align-self: flex-star;
+    }
+
+    .sobre-texto p:last-child {
+        margin-bottom: 0;
+    }
+
+    .sobre-imagem {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sobre-imagem img {
+        width: 100%;
+        max-width: 550px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Seção cardapio */
+    /* Seção cardapio */
+    /* Seção cardapio */
+    /* ==================== SEÇÃO CARDÁPIO ==================== */
+    #cardapio {
+        min-height: 100vh;
+        padding: 140px 4% 80px 4%;
+        background-color: #fbf8f0;
+    }
+
+    /* Título Principal do Cardápio Bonitão */
+    #cardapio .titulo-secao {
+        font-family: var(--fonte-secundaria);
+        font-size: 3.5rem;
+        color: var(--cor-principal);
+        text-align: center;
+        margin-bottom: 60px;
+        font-weight: 400;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Ornamentos laterais (linhas elegantes) */
+    #cardapio .titulo-secao::before,
+    #cardapio .titulo-secao::after {
+        content: "";
+        height: 2px;
+        width: 80px;
+        background: linear-gradient(to right, var(--cor-principal), #e2b957);
+        display: inline-block;
+    }
+
+    #cardapio .titulo-secao::before {
+        background: linear-gradient(to left, var(--cor-principal), #e2b957);
+    }
+
+    /* Detalhe sofisticado na letra C */
+    #cardapio .titulo-secao::first-letter {
+        color: var(--cor-detalhe);
+        font-family: var(--fonte-titulo);
+        font-size: 4.8rem;
+        vertical-align: middle;
+        margin-right: -5px;
+    }
+
+    /* Container de Cards - Organizado de 4 em 4 */
+    /* Container de Cards - Organizado de 3 em 3 */
+    #cardapio .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* ALTERADO: Agora renderiza exatamente 3 por linha */
+        gap: 30px;
+        /* Um pouco mais de espaço lateral já que os cards ganharam largura */
+        max-width: 1200px;
+        /* Ajustado para manter a proporção elegante na tela */
+        margin: 0 auto;
+    }
+
+    /* Estilo do Card Individual */
+    .card-container .card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 20px;
+        /* Mais respiro interno para o design de 3 colunas */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Efeito de flutuação dinâmica ao passar o mouse */
+    .card-container .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Área da Foto */
+    .card-container .card figure {
+        width: 100%;
+        height: 240px;
+        /* Fotos levemente mais altas para acompanhar o ganho de largura do card */
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+
+    .card figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .card:hover figure img {
+        transform: scale(1.05);
+    }
+
+    /* Informações do Prato */
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex-grow: 1;
+    }
+
+    /* Nome do Prato */
+    .card .card-info h3 {
+        font-family: var(--fonte-secundaria);
+        font-size: 1.4rem;
+        color: var(--cor-principal);
+        font-weight: 500;
+    }
+
+    /* Descrição dos Ingredientes */
+    .card .card-info p {
+        font-family: var(--fonte-texto);
+        font-size: 0.95rem;
+        color: #555555;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    /* Alinhamento do Preço fixado no rodapé do card */
+    .card .card-info h4 {
+        font-family: var(--fonte-texto);
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--cor-detalhe);
+        margin-top: auto;
+
+    }
+
+
+
+
+
+
+   #contato {
+    min-height: 100vh;
+    padding: 100px 5% 20px 5%;
+    background-color: #1C1008;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contato .col-contato {
+    width: 50%;
+    height: 700px;
+    border: none;
+}
+
+/* ── bloco de mídias ── */
+.col-contato .midias {
+    width: 100%;
+    height: 30%;
+    background-color: #2A1A08;
+    border-bottom: 2px solid #8B3A0F;
+    padding: 20px;
+}
+
+.midias h2 {
+    color: #D4A847;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+
+.midias figure {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 16px;
+}
+
+.icone-midias {
+    width: 90px;
+    height: 90px;
+    border-radius: 14px;
+    border: 1.5px solid #8B3A0F;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.icone-midias:hover {
+    transform: scale(1.08);
+    border-color: #D4A847;
+}
+
+/* ── bloco de endereço ── */
+.col-contato .endereco {
+    width: 100%;
+    height: 70%;
+    background-color: #0F0A02;
+    border-right: 2px solid #8B3A0F;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.endereco-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.endereco-icone {
+    font-size: 18px;
+    margin-top: 2px;
+}
+
+.endereco address {
+    color: #C8A96B;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.8;
+    font-style: normal;
+}
+
+/* horários */
+.horarios strong {
+    display: block;
+    color: #D4A847;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.horarios-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 16px;
+}
+
+.horarios-grid span {
+    color: #C8A96B;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.horarios-grid .fechado {
+    color: #5a4030;
+}
+
+.endereco iframe {
+    width: 100%;
+    flex: 1;
+    border: 1px solid #8B3A0F;
+    border-radius: 6px;
+}
+
+/* ── coluna do formulário ── */
+#contato .col-contato:last-child {
+    background-color: #F9F1E2;
+    padding: 30px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.form-header h1 {
+    color: #5C3A1E;
+    font-size: 22px;
+    font-family: Georgia, serif;
+    font-weight: 500;
+}
+
+.ornamento {
+    color: #C8A96B;
+    font-size: 16px;
+}
+
+.form-subtitulo {
+    color: #8a6a4a;
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.col-contato form {
+    width: 100%;
+    background-color: #F9F1E2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.col-contato form label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #5C3A1E;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.col-contato form input,
+.col-contato form textarea,
+.col-contato form select {
+    width: 100%;
+    border-radius: 4px;
+    background-color: #FFF8EC;
+    padding: 8px 10px;
+    border: 1px solid #C8A96B;
+    color: #1C1008;
+    font-family: Georgia, serif;
+    font-size: 14px;
+}
+
+.col-contato form input:focus,
+.col-contato form textarea:focus,
+.col-contato form select:focus {
+    outline: none;
+    border-color: #8B1A0A;
+    box-shadow: 0 0 0 3px rgba(139, 26, 10, 0.12);
+}
+
+.col-contato form textarea {
+    height: 75px;
+    resize: none;
+}
+
+/* linhas duplas lado a lado */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.col-contato form button {
+    width: 220px;
+    height: 42px;
+    border-radius: 4px;
+    background-color: #8B1A0A;
+    color: #D4A847;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1.5px solid #D4A847;
+    cursor: pointer;
+    margin: 6px auto 0;
+    transition: background-color 0.2s;
+}
+
+.col-contato form button:hover {
+    background-color: #6B1208;
+}
